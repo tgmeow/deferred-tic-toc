@@ -9,12 +9,12 @@ Example
 package yourPackage
 
 import (
+    "github.com/tgmeow/deferred-tic-toc"    
     "time"
-    "github.com/tgmeow/deferred-tic-toc"
 )
 
 func runSomething() {
-    defer ticToc("something")
+    defer deferredTicToc.ticToc("something")()
     time.Sleep(time.Second)
 }
 
