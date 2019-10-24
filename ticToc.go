@@ -8,7 +8,7 @@ import (
 
 // A timer that starts on execution and returns a function that prints the elapsed time.
 // Example use: defer ticToc("function1")()
-func ticToc(name string) func() {
+func TicToc(name string) func() {
 	start := time.Now()
 	return func() {
 		elapsed := time.Since(start)
